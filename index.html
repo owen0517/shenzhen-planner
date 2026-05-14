@@ -19,7 +19,6 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { background-color: #e0e0e0; display: flex; justify-content: center; }
         
-        /* 模擬手機外框 */
         #app-container {
             width: 100%;
             max-width: 414px;
@@ -32,7 +31,6 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        /* 頂部導航列 */
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -44,15 +42,13 @@
             z-index: 10;
         }
 
-        /* 主要內容區 */
         main {
             flex: 1;
             overflow-y: auto;
             padding: 15px;
-            padding-bottom: 80px; /* 留給底部導航 */
+            padding-bottom: 80px;
         }
 
-        /* 天氣標籤 */
         .weather-banner {
             background: rgba(0, 180, 216, 0.1);
             color: var(--primary);
@@ -68,7 +64,6 @@
             font-weight: bold;
         }
 
-        /* 日期標題 */
         .day-title {
             font-size: 1.1rem;
             color: var(--primary);
@@ -80,7 +75,6 @@
             gap: 5px;
         }
 
-        /* 行程卡片 */
         .card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -94,13 +88,11 @@
         .card-title { font-size: 1.05rem; color: var(--text-main); font-weight: bold; margin-bottom: 8px; }
         .card-desc { font-size: 0.9rem; color: var(--text-sub); line-height: 1.5; margin-bottom: 10px;}
         
-        /* 卡片類型顏色 */
         .type-attraction { border-left: 5px solid #4CAF50; }
         .type-restaurant { border-left: 5px solid #FF9800; }
         .type-transport { border-left: 5px solid #2196F3; }
         .type-hotel { border-left: 5px solid #9C27B0; }
 
-        /* 標籤系統 (必吃/必點/預約) */
         .tags-container { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
         .tag { padding: 4px 8px; border-radius: 8px; font-size: 0.75rem; font-weight: bold; }
         .tag-food { background-color: #FFF3E0; color: #E65100; }
@@ -108,7 +100,6 @@
         .tag-tel { background-color: #E8F5E9; color: #2E7D32; }
         .tag-important { background-color: #FFEBEE; color: #D32F2F; }
 
-        /* 導遊說故事區塊 */
         .guide-box {
             background-color: #F5F5F5;
             border-radius: 8px;
@@ -119,7 +110,6 @@
             border-left: 3px solid #FFC107;
         }
 
-        /* 導航按鈕 */
         .nav-btn {
             display: inline-flex;
             align-items: center;
@@ -136,14 +126,12 @@
             margin-top: 5px;
         }
 
-        /* 工具頁面表格 */
         .tool-section { margin-bottom: 25px; }
         .tool-title { font-size: 1rem; color: var(--primary); margin-bottom: 10px; font-weight: bold; }
         .info-box { background: white; padding: 15px; border-radius: 12px; font-size: 0.9rem; line-height: 1.6; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .budget-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
         .budget-total { font-weight: bold; color: #D32F2F; margin-top: 10px; text-align: right; }
 
-        /* 底部導航列 */
         .bottom-nav {
             position: absolute;
             bottom: 0;
@@ -166,7 +154,6 @@
         .nav-item.active { color: var(--primary); font-weight: bold; }
         .nav-icon { font-size: 1.5rem; margin-bottom: 2px; display: block; }
 
-        /* 切換頁面隱藏 */
         .hidden { display: none; }
     </style>
 </head>
@@ -177,14 +164,12 @@
         🌊 深圳南澳 孝心慢遊
     </header>
 
-    <!-- 行程頁面 -->
     <main id="view-itinerary">
         
         <div class="weather-banner">
             ⛅ 5月深圳預報：氣溫 24~29°C，微風舒適，注意防曬
         </div>
 
-        <!-- Day 1 -->
         <div class="day-title">📅 Day 1 (5/18 週一) - 抵達與日落海鮮</div>
         
         <div class="card type-hotel">
@@ -197,7 +182,7 @@
             <div class="card-desc">
                 辦理入住後直接回房午休1.5小時，避開正午烈日。酒店專屬福利：免費私人沙灘、無邊際泳池。
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=深圳半天雲海岸度假村" target="_blank" class="nav-btn">📍 導航至 酒店 (洋稠路1-3號)</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=深圳半天雲海岸度假村" target="_blank" class="nav-btn">📍 導航至 酒店</a>
         </div>
 
         <div class="card type-attraction">
@@ -207,7 +192,7 @@
                 <b>💁‍♀️ 導遊悄悄話：</b>這裡被譽為深圳版「小馬爾地夫」，海水呈現如果凍般的琉璃色。
             </div>
             <div class="card-desc">
-                從酒店步行5分鐘即到，全程平路無台階，非常適合長輩。記得在白色鞦韆和觀景台幫媽媽拍照！16:30返回酒店休息。
+                從酒店步行5分鐘即到，全程平路無台階。
             </div>
             <a href="https://www.google.com/maps/search/?api=1&query=阿卡那拉琉璃海" target="_blank" class="nav-btn">📍 導航至 阿卡那拉琉璃海</a>
         </div>
@@ -216,135 +201,52 @@
             <div class="card-time">18:00 - 20:00</div>
             <div class="card-title">🦀 金浪海鮮日落海景餐廳</div>
             <div class="tags-container">
-                <span class="tag tag-tel">預約: 0755-84311022 (提前訂二樓臨窗)</span>
+                <span class="tag tag-tel">預約: 0755-84311022</span>
                 <span class="tag tag-food">必點: 蒜蓉蒸生蠔、白灼海蝦、海膽炒飯</span>
             </div>
-            <div class="guide-box">
-                <b>💁‍♀️ 導遊悄悄話：</b>5月的深圳海膽最為肥美，海膽炒飯是來南澳絕對不能錯過的靈魂主食！
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=金浪海鮮餐廳南澳" target="_blank" class="nav-btn">📍 導航至 餐廳 (南澳斜嚇店)</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=金浪海鮮日落海景餐廳" target="_blank" class="nav-btn">📍 導航至 餐廳</a>
         </div>
 
-        <!-- Day 2 -->
         <div class="day-title">📅 Day 2 (5/19 週二) - 美人魚取景地</div>
-        <div class="weather-banner">🌤️ 沿海紫外線較強，請幫媽媽準備遮陽帽</div>
-
         <div class="card type-transport">
             <div class="card-time">09:30 - 10:00</div>
             <div class="card-title">🚗 前往楊梅坑接駁點</div>
-            <div class="tags-container">
-                <span class="tag tag-important">重要定位: 務必精準定位P1停車場</span>
-            </div>
-            <div class="card-desc">這是唯一能直接坐觀光車到鹿嘴山莊的停車場，減少步行。</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=楊梅坑P1停車場" target="_blank" class="nav-btn">📍 導航至 楊梅坑P1停車場</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=楊梅坑P1停車場" target="_blank" class="nav-btn">📍 導航至 楊梅坑P1</a>
         </div>
 
         <div class="card type-attraction">
             <div class="card-time">10:00 - 12:30</div>
             <div class="card-title">🧜‍♀️ 鹿嘴山莊遊玩</div>
-            <div class="tags-container">
-                <span class="tag tag-important">全票: 金鹿銀灘16元 + 山頂5元</span>
-            </div>
-            <div class="guide-box">
-                <b>💁‍♀️ 導遊悄悄話：</b>這裡是周星馳電影《美人魚》的拍攝地！懸崖絕壁與清澈海水交織，景色壯麗。
-            </div>
             <div class="card-desc">
-                山頂僅走15分鐘平路，在觀景台拍照即可，<b>無需下到美人魚洞底</b>，保護長輩膝蓋。
+                全程坐觀光車，山頂僅走15分鐘平路，無需下到美人魚洞底。
             </div>
         </div>
 
-        <div class="card type-restaurant">
-            <div class="card-time">12:30 - 14:00</div>
-            <div class="card-title">🐟 楊梅坑海鮮餐廳</div>
-            <div class="tags-container">
-                <span class="tag tag-tel">預約: 0755-84423986</span>
-                <span class="tag tag-food">必點: 清蒸鱸魚、白灼海蝦 (口味清淡)</span>
-            </div>
-            <div class="card-desc">步行2分鐘即到，適合長輩胃口。午餐後可沿濱海公路休閒散步或租自行車。</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=浪騎遊艇會" target="_blank" class="nav-btn">📍 導航至 餐廳 (近浪騎遊艇會)</a>
-        </div>
-
-        <!-- Day 3 -->
-        <div class="day-title">📅 Day 3 (5/20 週三) - 古城探秘與文藝小鎮</div>
-        
+        <div class="day-title">📅 Day 3 (5/20 週三) - 古城探秘</div>
         <div class="card type-attraction">
             <div class="card-time">09:30 - 11:30</div>
             <div class="card-title">🏯 大鵬所城遊覽</div>
-            <div class="guide-box">
-                <b>💁‍♀️ 導遊悄悄話：</b>建於明洪武27年(1394年)的抗擊海盜要塞，深圳別稱「鵬城」就是源自於此！
-            </div>
-            <div class="card-desc">
-                從南門主入口進入，全程平路無台階。參觀賴恩爵將軍第、大鵬糧倉，累了隨時在古城咖啡館休息。
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=大鵬所城南門" target="_blank" class="nav-btn">📍 導航至 大鵬所城南門</a>
-        </div>
-
-        <div class="card type-restaurant">
-            <div class="card-time">11:30 - 13:00</div>
-            <div class="card-title">🦞 隆興海鮮餐廳 (30年老字號)</div>
-            <div class="tags-container">
-                <span class="tag tag-tel">聯絡: 13510814969</span>
-                <span class="tag tag-food">必點: 避風塘螃蟹、鹽焗花螺、蒜蓉蒸帶子</span>
-            </div>
-            <div class="card-desc">明碼標價無宰客，本地人常去，吃得安心。</div>
-            <a href="https://www.google.com/maps/search/?api=1&query=大鵬水頭海鮮街" target="_blank" class="nav-btn">📍 導航至 大鵬水頭海鮮街店</a>
-        </div>
-
-        <div class="card type-attraction">
-            <div class="card-time">13:00 - 14:30</div>
-            <div class="card-title">🏖️ 較場尾文藝小鎮</div>
-            <div class="card-desc">
-                沿沙灘漫步，欣賞彩色民宿，在海邊咖啡館喝杯咖啡，度過愜意的午後時光。15:00 打車返程市區。
-            </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=較場尾沙灘" target="_blank" class="nav-btn">📍 導航至 較場尾沙灘</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=大鵬所城南門" target="_blank" class="nav-btn">📍 導航至 大鵬所城</a>
         </div>
 
     </main>
 
-    <!-- 工具頁面 (預設隱藏) -->
     <main id="view-tools" class="hidden">
-        
-        <div class="tool-section">
-            <div class="tool-title">✈️ 航班/交通資訊</div>
-            <div class="info-box">
-                本次行程規劃為<b>全程市區打車</b>，無航班資訊。<br>
-                💡 <b>溫馨提醒：</b>出發前請確認微信/支付寶已綁定好叫車小程式 (如滴滴出行)，週三下午15:00回程基本無擁堵。
-            </div>
-        </div>
-
         <div class="tool-section">
             <div class="tool-title">🏨 住宿資訊</div>
             <div class="info-box">
                 <b>深圳半天雲海岸度假村</b><br>
-                📍 地址：大鵬新區南澳洋稠路1-3號<br>
-                📞 電話：<a href="tel:075584402688" style="color:var(--primary)">0755-84402688</a><br>
-                🛎️ 備註：訂房要求高樓層正面海景房（避開樓梯間），靠近電梯口。
+                📞 電話：0755-84402688
             </div>
         </div>
-
         <div class="tool-section">
-            <div class="tool-title">🚨 緊急聯絡電話</div>
+            <div class="tool-title">🚨 緊急聯絡</div>
             <div class="info-box">
-                <div style="margin-bottom: 5px;">🚓 報警電話：<a href="tel:110" style="color:var(--primary); font-weight:bold;">110</a></div>
-                <div style="margin-bottom: 5px;">🚑 醫療急救：<a href="tel:120" style="color:var(--primary); font-weight:bold;">120</a></div>
-                <div>🛎️ 酒店前台：<a href="tel:075584402688" style="color:var(--primary); font-weight:bold;">0755-84402688</a></div>
+                110 (報警) / 120 (急救)
             </div>
         </div>
-
-        <div class="tool-section">
-            <div class="tool-title">💰 記帳 / 預算表 (預估)</div>
-            <div class="info-box">
-                <div class="budget-row"><span>🏨 酒店住宿 (2晚)</span><span>¥ ---</span></div>
-                <div class="budget-row"><span>🚗 交通打車費</span><span>¥ ---</span></div>
-                <div class="budget-row"><span>🦞 餐飲 (含2次海鮮)</span><span>¥ ---</span></div>
-                <div class="budget-row"><span>🎫 鹿嘴山莊觀光車(3人)</span><span>¥ 63</span></div>
-                <div class="budget-total">總預估：視實際消費填寫</div>
-            </div>
-        </div>
-
     </main>
 
-    <!-- 底部導航 -->
     <div class="bottom-nav">
         <div class="nav-item active" onclick="switchTab('itinerary', this)">
             <span class="nav-icon">🗺️</span>
@@ -359,15 +261,10 @@
 
 <script>
     function switchTab(tabName, element) {
-        // 重置選單樣式
         document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
         element.classList.add('active');
-
-        // 隱藏所有頁面
         document.getElementById('view-itinerary').classList.add('hidden');
         document.getElementById('view-tools').classList.add('hidden');
-
-        // 顯示選擇的頁面
         if(tabName === 'itinerary') {
             document.getElementById('view-itinerary').classList.remove('hidden');
         } else {
